@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="pokedex.js"></script>
+</head>
+<body onload="onloadFunc()">
+    <header>
+        <div class="search-container">
+            <input id="idSearch" type="text" placeholder="Hier eintippen...">
+            <button onclick="clickSearch()">Suchen</button>
+        </div>
+    </header>
+    <div id="content" class="pokemon-container"></div>
+    <div>
+        <button onclick="buttonNextPokemon()" id="buttonId">Weitere laden</button>
+    </div>
+
+    <!-- Modal Feld-->
+    <div id="pokemonModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <!-- Pfel für davor -->
+                <span class="prev" onclick="showPrevious()">&lt;</span>
+                <!-- Pokemon Details Ansicht -->
+                <div id="pokemonDetails"></div>
+                <!-- Pfeil für danach -->
+                <span class="next" onclick="showNext()">&gt;</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
